@@ -1,0 +1,39 @@
+.bgv {
+	width: 100vh;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	overflow: hidden;
+
+	video {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 100%;
+		min-height: 100vh;
+		object-fit: cover;
+	}
+}
+
+@media (min-aspect-ratio: 16/9) {
+	.bgv {
+		video {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@media (max-aspect-ratio: 16/9) {
+	.bgv {
+		video {
+			width: auto;
+			height: 100%;
+		}
+	}
+}
